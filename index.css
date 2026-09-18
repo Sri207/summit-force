@@ -1,0 +1,62 @@
+:root {
+  --navy-900: #0F2540;
+  --navy-800: #132C4C;
+  --green-700: #166B49;
+  --green-600: #1F8A5F;
+  --bg: #F4F6F8;
+  --surface: #FFFFFF;
+  --text: #16232E;
+  --text-soft: #4B5A67;
+  --border: #DDE4EA;
+}
+
+[data-theme="dark"] {
+  --bg: #0A1420;
+  --surface: #0F1D2E;
+  --text: #E7EDF2;
+  --text-soft: #A9B7C3;
+  --border: #1E3348;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.grid { display: grid; gap: 16px; }
+.g2 { grid-template-columns: repeat(2, 1fr); }
+.g4 { grid-template-columns: repeat(4, 1fr); }
+
+.btn {
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+.btn-primary { background: var(--green-600); color: #fff; }
+.btn-ghost { background: transparent; color: var(--text-soft); }
+.btn-outline { background: transparent; border: 1px solid var(--border); color: var(--text); }
+
+.field { margin-bottom: 12px; }
+.field label { display: block; font-size: 12px; margin-bottom: 4px; color: var(--text-soft); }
+.field input, .field select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background: var(--surface);
+  color: var(--text);
+}
+
+table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+th, td { text-align: left; padding: 10px; border-bottom: 1px solid var(--border); }
+.mono { font-family: monospace; }
